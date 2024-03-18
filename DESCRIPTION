@@ -1,4 +1,4 @@
-Package: theft
+Package: theftms
 Type: Package
 Title: Tools for Handling Extraction of Features from Time Series
 Version: 0.6.1
