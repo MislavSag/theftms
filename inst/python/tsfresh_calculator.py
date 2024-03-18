@@ -18,6 +18,6 @@ def tsfresh_calculator(timeseries, column_id, column_sort, cleanup, classes = No
         y = pd.Series(classes['group'].values, index=classes['id'])
         extracted_features = extract_relevant_features(timeseries, y, column_id = column_id, column_sort = column_sort)
     else:
-        extracted_features = extract_features(timeseries, column_id = column_id, column_sort = column_sort)
+        extracted_features = extract_features(timeseries, column_id = column_id, column_sort = column_sort,  n_jobs=0)
     
     return extracted_features
