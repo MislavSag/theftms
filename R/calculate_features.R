@@ -131,7 +131,7 @@ calc_tsfresh <- function(data, column_id = "id", column_sort = "timepoint", clea
   # Load Python function
   
   tsfresh_calculator <- function(){}
-  reticulate::source_python(system.file("python", "tsfresh_calculator.py", package = "theft")) # Ships with package
+  reticulate::source_python(system.file("python", "tsfresh_calculator.py", package = "theftms")) # Ships with package
   
   # Convert time index column to numeric to avoid {tsfresh} errors
   
@@ -220,7 +220,7 @@ calc_tsfel <- function(data){
   # Load Python function
   
   tsfel_calculator <- function(){}
-  reticulate::source_python(system.file("python", "tsfel_calculator.py", package = "theft")) # Ships with package
+  reticulate::source_python(system.file("python", "tsfel_calculator.py", package = "theftms")) # Ships with package
   
   if("group" %in% colnames(data)){
     outData <- data %>%
@@ -255,7 +255,7 @@ calc_kats <- function(data){
   # Load Python function
   
   kats_calculator <- function(){}
-  reticulate::source_python(system.file("python", "kats_calculator.py", package = "theft")) # Ships with package
+  reticulate::source_python(system.file("python", "kats_calculator.py", package = "theftms")) # Ships with package
   
   # Convert numeric time index to datetime as Kats requires it
   
